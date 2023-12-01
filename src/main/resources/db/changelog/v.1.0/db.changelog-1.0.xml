@@ -4,7 +4,13 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                    https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
 
-    <changeSet id="1" author="Koshkin Aleksandr">
-
+    <changeSet id="add-tag-1.0" author="Koshkin Aleksandr">
+        <tagDatabase tag="v.1.0"/>
     </changeSet>
+
+    <include file="20231130-01-create-table-file.xml" relativeToChangelogFile="true"/>
+    <include file="20231130-02-create-table-role.xml" relativeToChangelogFile="true"/>
+    <include file="20231130-03-create-table-user.xml" relativeToChangelogFile="true"/>
+    <include file="20231130-04-create-table-event.xml" relativeToChangelogFile="true"/>
+
 </databaseChangeLog>
